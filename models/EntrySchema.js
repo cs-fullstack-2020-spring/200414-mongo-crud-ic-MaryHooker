@@ -15,6 +15,6 @@ let EntrySchema = new Schema(
 )
 
 //export model
-module.exports = mongoose.model('200414inClass', EntrySchema);
+module.exports = mongoose.model('entry200414', EntrySchema);
 
 
