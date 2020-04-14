@@ -16,6 +16,9 @@ router.post('/',(req,res)=>{
 //Find a video by title
 router.get('/:videoTitle',(req,res)=>{
     // res.send(`Found new video by title`);
+    EntryCollection.findOne({videoTitle: req.params.videoTitle}, (errors,results)=>{
+        errors ? res.send(errors) : res.send(results);
+    })
 })
 
 //Find all videos
